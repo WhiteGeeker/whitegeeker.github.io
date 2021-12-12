@@ -162,18 +162,48 @@ var _hmt = _hmt || [];
 	<!-- 引入正文 -->
 	<div id="content">
 		<h1 id="article-title">
-	<i class="fa fa-tags" aria-hidden="true"></i>TAGS
+	categories
 </h1>
-<h2 id="article-title">
-	目前共计 0 个标签
-</h2>
+<div class="article-meta">
+	
+	<span>whitegeeker</span>
+	<span>2021-12-12 11:33:04</span>
+		<div id="article-categories">
+    
 
+    
+		</div>
+
+</div>
 
 <div id="article-content">
-	<ul>
-      
-	</ul>
+	
 </div>
+
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			el: '#vcomments',
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			path: window.location.pathname,
+			avatar: 'retro',
+			highlight: false,
+      recordIP: true,
+      enableQQ: true,
+			requiredFields: ['nick','mail']
+		})
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
