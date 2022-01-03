@@ -22,9 +22,9 @@
 <meta name="keywords" content="黑客" />
 
 
-<meta name="description" content="0.1 认识很多人并不了解黑客是什么，而是将黑客与骇客混为一谈，实际上:
-
-黑客:最早源自英文hacker，早期在美国的电脑界是带有褒义的。他们都是水平高超的电脑专家，尤其是程序设计人员，算是一..." />
+<meta name="description" content="导言刚入门的黑客，都必须要学会cmd，而cmd并不难理解，只是背诵记忆的较多，学习cmd可以为以后入侵、拿权限奠定坚实的基础。
+不过呢，人都是懒惰的我也是，所以，我会尽可能简化去呈现给大家
+这样..." />
 
 
 <meta name="robots" content="all" />
@@ -35,7 +35,7 @@
 
 <title>
     
-    黑客从入门到入狱指南 |
+    cmd详解 |
     
     白客空间
 </title>
@@ -149,9 +149,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="黑客从入门到入狱指南">
+        <h1 id="cmd详解">
             
-            黑客从入门到入狱指南
+            cmd详解
             
         </h1>
         <div class="post-meta">
@@ -176,7 +176,7 @@
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
         <span class="date-meta">
-            2022/01/02</span>
+            2022/01/03</span>
     </span>
     
     <span class="fa-wrap">
@@ -191,43 +191,43 @@
     </div>
     
     <div class="post-body post-content">
-        <h1 id="0-1-认识"><a href="#0-1-认识" class="headerlink" title="0.1 认识"></a>0.1 认识</h1><p>很多人并不了解黑客是什么，而是将黑客与骇客混为一谈，实际上:</p>
+        <h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p>刚入门的黑客，都<strong>必须</strong>要学会cmd，而cmd并不难理解，只是背诵记忆的较多，学习cmd可以为以后入侵、拿权限奠定坚实的基础。</p>
+<p>不过呢，人都是懒惰的<del>我也是</del>，所以，我会尽可能简化去呈现给大家</p>
+<p><del>这样我也可以少打点字</del></p>
+<h1 id="1-ping"><a href="#1-ping" class="headerlink" title="1.ping"></a>1.ping</h1><blockquote>
+<p>它是用来检查网络是否通畅或者网络连接速度的命令。作为一个生活在网络上的管理员或者黑客来说，ping命令是第一个必须掌握的DOS命令，它所利用的原理是这样的：网络上的机器都有唯一确定的IP地址，我们给目标IP地址发送一个数据包，对方就要返回一个同样大小的数据包，根据返回的数据包我们可以确定目标主机的存在，可以初步判断目标主机的操作系统等。下面就来看看它的一些常用的操作。</p>
+</blockquote>
+<h2 id="t"><a href="#t" class="headerlink" title="-t"></a>-t</h2><p>在ping后面输入-t，即</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -t </span><br></pre></td></tr></table></figure>
+
+<p><strong>作用</strong>：不断向目标发送数据包，直到我们强迫其停止。试想，如果你使用100M的宽带接入，而目标IP是56K的小猫，那么要不了多久，目标IP就因为承受不了这么多的数据而掉线，呵呵，一次攻击就这么简单的实现了。　　</p>
+<h2 id="l"><a href="#l" class="headerlink" title="-l"></a>-l</h2><p><strong>作用</strong>：定义发送数据包的大小，默认为32字节，我们利用它可以最大定义到65500字节。结合上面介绍的-t参数一起使用，会有更好的效果哦。</p>
+<h2 id="n"><a href="#n" class="headerlink" title="-n"></a>-n</h2><p><strong>作用</strong>：定义向目标IP发送数据包的次数，默认为3次。如果网络速度比较慢，3次对我们来说也浪费了不少时间，因为现在我们的目的仅仅是判断目标IP是否存在，那么就定义为一次吧。</p>
+<p>tip：以上可以连用，如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping IP -t -n 3</span><br></pre></td></tr></table></figure>
+
+<p>我这里写的“IP”和”3”都是参数，自己填写，我只是打个比方  </p>
 <blockquote>
-<p>黑客:最早源自英文hacker，早期在美国的电脑界是带有褒义的。他们都是水平高超的电脑专家，尤其是程序设计人员，算是一个统称。</p>
+<p>说明一下，如果-t 参数和 -n参数一起使用，ping命令就以放在后面的参数为标准，比如”ping IP -t -n 3”，虽然使用了-t参数，但并不是一直ping下去，而是只ping 3次。另外，ping命令不一定非得ping IP，也可以直接ping主机域名，这样就可以得到主机的IP。</p>
 </blockquote>
-<blockquote>
-<p>“骇客”也可以指：在信息安全里，“骇客”指研究智取计算机安全系统的人员。利用公共通讯网路，如互联网和电话系统，在未经许可的情况下，载入对方系统的被称为黑帽骇客</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
+<p>这里time=2表示从发出数据包到接受到返回数据包所用的时间是2秒，从这里可以判断网络连接速度的大小 。从TTL的返回值可以初步判断被ping主机的操作系统，之所以说”初步判断”是因为这个值是可以修改的。这里TTL=32表示操作系统可能是win98。<br><strong>（小知识：如果TTL=128，则表示目标主机可能是Win2000；如果TTL=250，则目标主机可能是Unix）</strong><br>至于利用ping命令可以快速查找局域网故障，可以快速搜索最快的QQ服务器，可以对别人进行ping攻击……这些就靠大家自己发挥了</p>
 </blockquote>
-<p>白帽子主要以“防”为主，而黑帽子主要以“攻”为主，不论是黑帽还是白帽，都要先学会攻击。</p>
-<blockquote>
-<p>焉知攻，怎知防？ </p>
+<img src="https://s2.loli.net/2022/01/03/YUm39nyVqKv1N2c.jpg" alt="v2-96c2c26eb998d8549840d758fb79124f_720w.jpg" style="zoom:50%;" />
+
+<h1 id="2-nbtstat"><a href="#2-nbtstat" class="headerlink" title="2.nbtstat"></a>2.nbtstat</h1><p> <strong>显示统计数据命令</strong></p>
+<p>该命令使用TCP/IP上的NetBIOS显示协议统计和当前TCP/IP连接，使用这个命令你可以得到远程主机的NETBIOS信息，比如用户名、所属的工作组、网卡的MAC地址等。在此我们就有必要了解几个基本的参数。</p>
+<p><strong>-a</strong> 使用这个参数，只要你知道了远程主机的机器名称，就可以得到它的NETBIOS信息（下同）。 　</p>
+<p>-a这个参数也可以得到远程主机的NETBIOS信息，但需要你知道它的IP。</p>
+<p><strong>-n</strong> 列出本地机器的NETBIOS信息。 　</p>
+<h1 id="3-netstat"><a href="#3-netstat" class="headerlink" title="3.netstat"></a>3.<strong>netstat</strong></h1><blockquote>
+<p>这是一个用来查看网络状态的命令，操作简便功能强大。　</p>
 </blockquote>
-<h1 id="0-2发展史"><a href="#0-2发展史" class="headerlink" title="0.2发展史"></a>0.2发展史</h1><blockquote>
-<p>黑客最早始于20 世纪50年代，最早的计算机1946年在宾夕法尼亚大学出现，而最早的黑客出现于麻省理工学院，贝尔实验室也有。最初的黑客一般都是一些高级的技术人员，他们热衷于挑战、崇尚自由并主张信息的共享。<br>1994年以来，因特网在全球的迅猛发展为人们提供了方便、自由和无限的财富，政治、军事、经济、科技、教育、文化等各个方面都越来越网络化，并且逐渐成为人们生活、娱乐的一部分。可以说，信息时代已经到来，信息已成为物质和能量以外维持人类社会的第三资源，它是未来生活中的重要介质。随着计算机的普及和因特网技术的迅速发展，黑客也随之出现了。</p>
-</blockquote>
-<blockquote>
-<p>黑客”一词由英语Hacker英译而来，是指专门研究、发现计算机和网络漏洞的计算机爱好者。他们伴随着计算机和网络的发展而产生成长。黑客对计算机有着狂热的兴趣和执着的追求，他们不断地研究计算机和网络知识，发现计算机和网络中存在的漏洞，喜欢挑战高难度的网络系统并从中找到漏洞，然后向管理员提出解决和修补漏洞的方法。<br>黑客不干涉政治，不受政治利用，他们的出现推动了计算机和网络的发展与完善。黑客所做的不是恶意破坏，他们是一群纵横驰骋于网络上的大侠，追求共享、免费，提倡自由、平等。黑客的存在是由于计算机技术的不健全，从某种意义上来讲，计算机的安全需要更多黑客去维护。<br>但是到了今天，黑客一词已被用于泛指那些专门利用计算机搞破坏或恶作剧的家伙，对这些人的正确英文叫法是Cracker，有人也翻译成“骇客”或是“<strong>者”，也正是由于</strong>者的出现玷污了黑客的声誉，使人们把黑客和**者混为一谈，黑客被人们认为是在网上到处搞破坏的人。<br>一个黑客即使从意识和技术水平上已达到黑客水平，也决对不会声称自己是一名黑客，因为黑客只有公认的，没有自封的，他们重视技术，更重视思想和品质！</p>
-<p><del>当然，想装逼也可以，但要有真正的技术</del></p>
-</blockquote>
-<h1 id="0-3-需要什么"><a href="#0-3-需要什么" class="headerlink" title="0.3 需要什么"></a>0.3 需要什么</h1><p>很多人都梦想当黑客，但实际上，在互联网安全这条道路上，本无对错，评判的人多了，仿佛有了…</p>
-<p>不论你是为了自己还是他人，如果你认为你是一名黑客，那么<strong>一定</strong>要有一下几点：  </p>
-<ul>
-<li>对算法、程序的痴迷：看到数字、字符会有种亲切感</li>
-<li>时刻想着自己只是技术领域大海中的一滴水：即便自己有实力，也最好要保留，真正的黑客不只是会追求功名</li>
-<li>有恒心：大家都知道，黑客所需学习的知识远远大于普通的程序员，如果没有将其当作终生爱好，最好就不要学，因为很难坚持</li>
-<li>耐下心来，多思考，勤查资料：很多时候我们单凭一己之力很难攻克难题，这个时候可以借助任何工具，要努力突破瓶颈</li>
-</ul>
-<h1 id="0-4-推荐语言"><a href="#0-4-推荐语言" class="headerlink" title="0.4 推荐语言"></a>0.4 推荐语言</h1><p><strong>python</strong>       </p>
-<p>**java **      </p>
-<p><strong>php</strong>               </p>
-<p><strong>asp</strong>   </p>
-<p><strong>html/css/javascript</strong></p>
-<p>如果有能力，最好还要学精通<strong>c/c++</strong></p>
-<h1 id="1-0-DAY1-cmd指令"><a href="#1-0-DAY1-cmd指令" class="headerlink" title="1.0 DAY1 cmd指令"></a>1.0 DAY1 cmd指令</h1><blockquote>
-</blockquote>
-<h1 id="2-0-DAY02-黑客术语"><a href="#2-0-DAY02-黑客术语" class="headerlink" title="2.0 DAY02 黑客术语"></a>2.0 DAY02 黑客术语</h1><blockquote>
-</blockquote>
-<p><marquee>每周都会更新，尽请期待</marquee></p>
+<p>-a 查看本地机器的所有开放端口，可以有效发现和预防木马，可以知道机器所开的服务等信息</p>
+<p>这里可以看出本地机器开放有FTP服务、Telnet服务、邮件服务、WEB服务等。用法：netstat -a IP。  </p>
+<p>-r 列出当前的路由信息，告诉我们本地机器的网关、子网掩码等信息。用法：netstat -r IP。</p>
+<p>正在更新ing…</p>
+<h1 id="文献参考："><a href="#文献参考：" class="headerlink" title="文献参考："></a>文献参考：</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/59498577">https://zhuanlan.zhihu.com/p/59498577</a></p>
 
     </div>
     
@@ -246,17 +246,17 @@
 </article>
 <div class="article-nav prev-next-wrap clearfix">
     
-    <a href="/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/" class="pre-post btn btn-default" title='cmd详解'>
+    <a href="/2022/01/03/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD/" class="pre-post btn btn-default" title='黑客常用术语'>
         <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
         <span class="hidden-xs">
-            cmd详解</span>
+            黑客常用术语</span>
     </a>
     
     
-    <a href="/2021/12/12/python/" class="next-post btn btn-default" title='python'>
+    <a href="/2022/01/02/%E9%BB%91%E5%AE%A2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E6%8C%87%E5%8D%97/" class="next-post btn btn-default" title='黑客从入门到入狱指南'>
         <span class="hidden-lg">下一篇</span>
         <span class="hidden-xs">
-            python</span><i class="fa fa-angle-right fa-fw"></i>
+            黑客从入门到入狱指南</span><i class="fa fa-angle-right fa-fw"></i>
     </a>
     
 </div>
@@ -290,7 +290,7 @@
             Table of Contents
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0-1-%E8%AE%A4%E8%AF%86"><span class="toc-text">0.1 认识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-2%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="toc-text">0.2发展史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-3-%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88"><span class="toc-text">0.3 需要什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-4-%E6%8E%A8%E8%8D%90%E8%AF%AD%E8%A8%80"><span class="toc-text">0.4 推荐语言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-0-DAY1-cmd%E6%8C%87%E4%BB%A4"><span class="toc-text">1.0 DAY1 cmd指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-0-DAY02-%E9%BB%91%E5%AE%A2%E6%9C%AF%E8%AF%AD"><span class="toc-text">2.0 DAY02 黑客术语</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%BC%E8%A8%80"><span class="toc-text">导言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-ping"><span class="toc-text">1.ping</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#t"><span class="toc-text">-t</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#l"><span class="toc-text">-l</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#n"><span class="toc-text">-n</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-text">实例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-nbtstat"><span class="toc-text">2.nbtstat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-netstat"><span class="toc-text">3.netstat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-text">文献参考：</span></a></li></ol>
         
     </div>
 </aside>
