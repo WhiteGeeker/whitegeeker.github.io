@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="白客空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.3.0">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://example.com">
+    <!--SEO-->
+
+<meta name="keywords" content="黑客" />
+
+
+<meta name="description" content="0.1 认识很多人并不了解黑客是什么，而是将黑客与骇客混为一谈，实际上:
+
+黑客:最早源自英文hacker，早期在美国的电脑界是带有褒义的。他们都是水平高超的电脑专家，尤其是程序设计人员，算是一..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    黑客从入门到入狱指南 |
+    
+    白客空间
+</title>
+
+<link rel="alternate" href="/atom.xml" title="白客空间" type="application/atom+xml">
+
+
+<link rel="icon" href="/ok.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<script>
+(function() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="main-header"  style="background-image:url(
+    https://hexo-theme-snippet-1251680922.cos.ap-beijing.myqcloud.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='whitegeeker'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                We Are Anonymous
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://example.com">
+                        白客空间</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/前端/"><i class="fa /img/favition.ico"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/后端/"><i class="fa /img/favition.ico"></i>
+                                后端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/工具/"><i class="fa /img/favition.ico"></i>
+                                工具</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/攻防/"><i class="fa "></i>
+                                攻防</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/社工/"><i class="fa "></i>
+                                社工</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/趣测/"><i class="fa "></i>
+                                趣测</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/问答/"><i class="fa "></i>
+                                问答</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/动态/"><i class="fa "></i>
+                                动态</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="黑客从入门到入狱指南">
+            
+            黑客从入门到入狱指南
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/%E9%BB%91%E5%AE%A2/" rel="tag">黑客</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2022/01/02</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="0-1-认识"><a href="#0-1-认识" class="headerlink" title="0.1 认识"></a>0.1 认识</h1><p>很多人并不了解黑客是什么，而是将黑客与骇客混为一谈，实际上:</p>
+<blockquote>
+<p>黑客:最早源自英文hacker，早期在美国的电脑界是带有褒义的。他们都是水平高超的电脑专家，尤其是程序设计人员，算是一个统称。</p>
+</blockquote>
+<blockquote>
+<p>“骇客”也可以指：在信息安全里，“骇客”指研究智取计算机安全系统的人员。利用公共通讯网路，如互联网和电话系统，在未经许可的情况下，载入对方系统的被称为黑帽骇客</p>
+</blockquote>
+<p>白帽子主要以“防”为主，而黑帽子主要以“攻”为主，不论是黑帽还是白帽，都要先学会攻击。</p>
+<blockquote>
+<p>焉知攻，怎知防？ </p>
+</blockquote>
+<h1 id="0-2发展史"><a href="#0-2发展史" class="headerlink" title="0.2发展史"></a>0.2发展史</h1><blockquote>
+<p>黑客最早始于20 世纪50年代，最早的计算机1946年在宾夕法尼亚大学出现，而最早的黑客出现于麻省理工学院，贝尔实验室也有。最初的黑客一般都是一些高级的技术人员，他们热衷于挑战、崇尚自由并主张信息的共享。<br>1994年以来，因特网在全球的迅猛发展为人们提供了方便、自由和无限的财富，政治、军事、经济、科技、教育、文化等各个方面都越来越网络化，并且逐渐成为人们生活、娱乐的一部分。可以说，信息时代已经到来，信息已成为物质和能量以外维持人类社会的第三资源，它是未来生活中的重要介质。随着计算机的普及和因特网技术的迅速发展，黑客也随之出现了。</p>
+</blockquote>
+<blockquote>
+<p>黑客”一词由英语Hacker英译而来，是指专门研究、发现计算机和网络漏洞的计算机爱好者。他们伴随着计算机和网络的发展而产生成长。黑客对计算机有着狂热的兴趣和执着的追求，他们不断地研究计算机和网络知识，发现计算机和网络中存在的漏洞，喜欢挑战高难度的网络系统并从中找到漏洞，然后向管理员提出解决和修补漏洞的方法。<br>黑客不干涉政治，不受政治利用，他们的出现推动了计算机和网络的发展与完善。黑客所做的不是恶意破坏，他们是一群纵横驰骋于网络上的大侠，追求共享、免费，提倡自由、平等。黑客的存在是由于计算机技术的不健全，从某种意义上来讲，计算机的安全需要更多黑客去维护。<br>但是到了今天，黑客一词已被用于泛指那些专门利用计算机搞破坏或恶作剧的家伙，对这些人的正确英文叫法是Cracker，有人也翻译成“骇客”或是“<strong>者”，也正是由于</strong>者的出现玷污了黑客的声誉，使人们把黑客和**者混为一谈，黑客被人们认为是在网上到处搞破坏的人。<br>一个黑客即使从意识和技术水平上已达到黑客水平，也决对不会声称自己是一名黑客，因为黑客只有公认的，没有自封的，他们重视技术，更重视思想和品质！</p>
+<p><del>当然，想装逼也可以，但要有真正的技术</del></p>
+</blockquote>
+<h1 id="0-3-需要什么"><a href="#0-3-需要什么" class="headerlink" title="0.3 需要什么"></a>0.3 需要什么</h1><p>很多人都梦想当黑客，但实际上，在互联网安全这条道路上，本无对错，评判的人多了，仿佛有了…</p>
+<p>不论你是为了自己还是他人，如果你认为你是一名黑客，那么<strong>一定</strong>要有一下几点：  </p>
+<ul>
+<li>对算法、程序的痴迷：看到数字、字符会有种亲切感</li>
+<li>时刻想着自己只是技术领域大海中的一滴水：即便自己有实力，也最好要保留，真正的黑客不只是会追求功名</li>
+<li>有恒心：大家都知道，黑客所需学习的知识远远大于普通的程序员，如果没有将其当作终生爱好，最好就不要学，因为很难坚持</li>
+<li>耐下心来，多思考，勤查资料：很多时候我们单凭一己之力很难攻克难题，这个时候可以借助任何工具，要努力突破瓶颈</li>
+</ul>
+<h1 id="0-4-推荐语言"><a href="#0-4-推荐语言" class="headerlink" title="0.4 推荐语言"></a>0.4 推荐语言</h1><p><strong>python</strong>       </p>
+<p>**java **      </p>
+<p><strong>php</strong>               </p>
+<p><strong>asp</strong>   </p>
+<p><strong>html/css/javascript</strong></p>
+<p>如果有能力，最好还要学精通<strong>c/c++</strong></p>
+<h1 id="1-0-DAY1-cmd指令"><a href="#1-0-DAY1-cmd指令" class="headerlink" title="1.0 DAY1 cmd指令"></a>1.0 DAY1 cmd指令</h1><blockquote>
+</blockquote>
+<h1 id="2-0-DAY02-黑客术语"><a href="#2-0-DAY02-黑客术语" class="headerlink" title="2.0 DAY02 黑客术语"></a>2.0 DAY02 黑客术语</h1><blockquote>
+</blockquote>
+<p><marquee>每周都会更新，尽请期待</marquee></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/" class="pre-post btn btn-default" title='cmd详解'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            cmd详解</span>
+    </a>
+    
+    
+    <a href="/2021/12/12/python/" class="next-post btn btn-default" title='python'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            python</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+    
+<div class="utteranc">
+  
+  <script
+    src='https://utteranc.es/client.js'
+    repo='shenliyang/snippet-comment'
+    issue-term='pathname'
+    issue-number=''
+    theme='github-light'
+    label=''
+    crossorigin='anonymous'
+    async
+  ></script>
+</div>
+
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0-1-%E8%AE%A4%E8%AF%86"><span class="toc-text">0.1 认识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-2%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="toc-text">0.2发展史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-3-%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88"><span class="toc-text">0.3 需要什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-4-%E6%8E%A8%E8%8D%90%E8%AF%AD%E8%A8%80"><span class="toc-text">0.4 推荐语言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-0-DAY1-cmd%E6%8C%87%E4%BB%A4"><span class="toc-text">1.0 DAY1 cmd指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-0-DAY02-%E9%BB%91%E5%AE%A2%E6%9C%AF%E8%AF%AD"><span class="toc-text">2.0 DAY02 黑客术语</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+    访问量:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    访客数:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/app.js?rev=@@hash.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

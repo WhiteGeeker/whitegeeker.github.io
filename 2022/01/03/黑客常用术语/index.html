@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="白客空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.3.0">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://example.com">
+    <!--SEO-->
+
+<meta name="keywords" content="黑客" />
+
+
+<meta name="description" content="导言本期博客非常轻松易懂，下面是黑客常用术语
+正文远控
+很流行的一类工具，其中最著名的是灰鸽子，远控最主要的功能就是控制电脑，一般用来做企业电脑批量管理，学校机房，网吧等，但是被黑客利用后，出现..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    黑客常用术语 |
+    
+    白客空间
+</title>
+
+<link rel="alternate" href="/atom.xml" title="白客空间" type="application/atom+xml">
+
+
+<link rel="icon" href="/ok.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<script>
+(function() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="main-header"  style="background-image:url(
+    https://hexo-theme-snippet-1251680922.cos.ap-beijing.myqcloud.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='whitegeeker'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                We Are Anonymous
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://example.com">
+                        白客空间</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/前端/"><i class="fa /img/favition.ico"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/后端/"><i class="fa /img/favition.ico"></i>
+                                后端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/工具/"><i class="fa /img/favition.ico"></i>
+                                工具</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/攻防/"><i class="fa "></i>
+                                攻防</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/社工/"><i class="fa "></i>
+                                社工</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/趣测/"><i class="fa "></i>
+                                趣测</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/问答/"><i class="fa "></i>
+                                问答</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/动态/"><i class="fa "></i>
+                                动态</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="黑客常用术语">
+            
+            黑客常用术语
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/%E9%BB%91%E5%AE%A2/" rel="tag">黑客</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2022/01/03</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p><strong>本期博客非常轻松易懂，下面是黑客常用术语</strong></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p><strong>远控</strong></p>
+<p>很流行的一类工具，其中最著名的是灰鸽子，远控最主要的功能就是控制电脑，一般用来做企业电脑批量管理，学校机房，网吧等，但是被黑客利用后，出现了很多新功能，比如键盘记录，偷看视频等，从某种意义上来说是严重违法的行为，随着杀毒软件的升级，和对此类软件的打击，现在玩远控的人越来越少了。</p>
+<p><strong>肉鸡</strong></p>
+<p>所谓“肉鸡”是一种很形象的比方，用来比作那些能够随意被我们操控的电脑或服务器。也就是被远控软件控制的机器。</p>
+<p><strong>木马</strong></p>
+<p>就是那些表面上伪装成了正常的程序，可是当这些被程序运行时，就会获得电脑的整个操控权限。有很多<a target="_blank" rel="noopener" href="https://www.xf1433.com/">黑客</a>就是用木马来对电脑进行破坏的，例如远控要控制电脑的前提就是先生成木马，然后想办法让对方运行，就能进行控制。 </p>
+<p><strong>网页木马</strong></p>
+<p>表面上伪装成一般的网页文件，但是把病毒代码直接插入到正常的网页文件中，当有人访问时，网页木马就会执行相应的漏洞代码进行破坏。例如有人访问色情网站，发现cpu很高，实际上里面调用了挖矿的代码，当你访问网站时会利用你的电脑进行挖矿。</p>
+<p><strong>挂马</strong></p>
+<p>就是在别人的网站文件里面放入网页木马，将恶意代码插入到对方正常的网页文件里，以使阅读者中马，挂马是形容一种操作行为，不是一种技术。</p>
+<p><strong>后门</strong></p>
+<p>这是一种形象的比方，比如你想下载个腾讯qq，但是在网上下载到不是官方的文件，而是别人先把病毒文件绑定在正常的文件里，当打开时会中毒，通常这种病毒称为后门，因为受害者无法发现。</p>
+<p><strong>弱口令</strong></p>
+<p>指那些密码强度不够，容易被猜解的密码，类似123456，abc123，abcdefg，woainixiaofeng这样的口令（密码） ，是黑客常见的入侵手段，100个密码就有20个左右是这种弱密码。</p>
+<p><strong>shell</strong></p>
+<p>指的是一种指令执行环境，比方我们按下键盘上的“windows键+R”时出现“运行”对话框，在里面输入“cmd”会呈现一个可以运行命令的黑窗口，这个窗口大家基本上都用过，或者在黑客电影里看过，这个就是Windows的Shell执行环境。以前没有鼠标只有键盘的时候，就是靠这个完成全部电脑操作的！</p>
+<p><strong>WebShell</strong></p>
+<p>WebShell就是以asp、php、jsp等网页文件方式存在的一种命令环境，也能够将其称做是一种网页后门。黑客在入侵了一个网站后，一般会将这些asp或php后门文件与网站服务器WEB目录下正常的网页文件混在一起，一般会藏得比较深，因为不能被管理员发现，被删除就不能获得网站控制权了。一个网站被挂上webshell后门，基本上可以为所欲为，想修改网站任何部分或者删除都可以。黑客之间的网站交易就是以webshell进行的，例如我花多少钱买这个网站的webshell权限，而攻击者负责想办法在这个网站里面放上webshell后门，这样说大家应该明白了。</p>
+<p><strong>注入</strong></p>
+<p>随着B/S结构开发的网站环境，基本上全部的网站都需要数据库。用户能够提交一段数据库查询代码，根据程序回来的结果，获得某些他想要知的数据，这是正常的情况，但是在查询语句中修改为有恶意攻击的代码，就具有破坏性，这个就是所谓的SQL注入，最具攻击性的网页漏洞，让无数企业站被入侵的罪魁祸首。 </p>
+<p><strong>注入点</strong></p>
+<p>是指能够实行sql注入的地方，一般是带有参数的网页地址。根据注入点数据库的帐号权限的不同，你所得到的权限也不同。 </p>
+<p><strong>内网</strong></p>
+<p>通俗的讲就是局域网，比方网吧，校园网，公司内部网等都属于此类。查看IP地址如果是在以下三个范围之内的话，就说明我们是处于内网之中的：10.0.0.0—10.255.255.255，172.16.0.0—172.31.255.255，192.168.0.0—192.168.255.255。</p>
+<p><strong>外网</strong></p>
+<p>直接连入internet（互联网），能让任何一台电脑相互访问，外网需要接入宽带才能实现。</p>
+<p><strong>免杀</strong></p>
+<p>就是通过加壳、加密、修改特征码、加花指令等等操作来改变程序，使其逃过杀毒软件的查杀。我们前面说的远控生成的木马，往往会被杀毒软件发现，不能达到控制电脑的效果，所以需要利用免杀技术来逃避杀毒软件的扫描，让杀毒软件误以为是安全的软件，从而不进行拦截。 </p>
+<p><strong>加壳</strong></p>
+<p>就是运用特别的算法，将exe可执行程序或许DLL动态链接库文件的编码进行改变（比方实现压缩、加密），以到达缩小文件体积和加密程序编码，甚至是躲过杀毒软件查杀的意图。目前较常用的壳有UPX，ASPack、PePack、PECompact、UPack、免疫007等等。 加壳另外一个重要的作用就是防止软件被破解，有攻就有防嘛！</p>
+<p><strong>花指令</strong></p>
+<p>就是几句汇编指令，让汇编语句进行一些跳转，使得杀毒软件不能正常的判断病毒文件的结构。说通俗点就是”杀毒软件是从头到脚按顺序来查找病毒。如果我们把病毒的头和脚颠倒位置，杀毒软件就找不到病毒了。</p>
+<p><strong>路由器</strong><br>用来上网的设备，以前用宽带线直接连接电脑输入密码就能上网，现在电脑为什么都要连接路由器呢？因为手机需要连接路由器的wifi来上网啊，所以宽带线去连路由器了，电脑没宽带线了，就只能去连接连接路由器了。</p>
+<p><strong>端口</strong><br>要网络上，知道一台电脑的ip地址，仅仅相当于知道了它的居住地址，要和它进行通讯，我们还要知道它开了哪些端口，比方说我们到一家医院，挂号要到1号窗口，划价要到2号窗口，取药要到3号窗口.那么与计算机的通讯也是一样的，要访问小风教程网，你得与小风教程网服务器的80端口进行联系，要ftp登陆空间，传输文件，我们又得服务器的21端口连接了，所以说，端口就是一种数据的传输通道，用于接收某些数据，然后传给相应的回复，而电脑将这些数据处理后，再将相应的回复通过端口传给对方。</p>
+<p><strong>ip地址</strong><br>互联网上的电脑有很多，为了让他们能够彼此识别，互联网上的每一台主机都分配有一个仅有的32位地址，该地址称为ip地址，也称作互联网地址，ip地址由4个数值部分组成，每个数值部分可取值0-255，每个ip地址都有256x256-1=65535个端口。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>懂了一些基本用语，相信你会在这条路上越走越远，加油吧！</p>
+<h1 id="文献参考"><a href="#文献参考" class="headerlink" title="文献参考"></a>文献参考</h1><p>小风教程网</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2022/01/14/%E4%BD%8E%E8%BD%A8%E9%81%93%E7%A6%BB%E5%AD%90%E7%82%AE-%E8%AF%B4%E6%98%8E%E4%B9%A6/" class="pre-post btn btn-default" title='低轨道离子炮说明书'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            低轨道离子炮说明书</span>
+    </a>
+    
+    
+    <a href="/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/" class="next-post btn btn-default" title='cmd详解'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            cmd详解</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+    
+<div class="utteranc">
+  
+  <script
+    src='https://utteranc.es/client.js'
+    repo='shenliyang/snippet-comment'
+    issue-term='pathname'
+    issue-number=''
+    theme='github-light'
+    label=''
+    crossorigin='anonymous'
+    async
+  ></script>
+</div>
+
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%BC%E8%A8%80"><span class="toc-text">导言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-text">正文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E5%8F%82%E8%80%83"><span class="toc-text">文献参考</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+    访问量:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    访客数:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/app.js?rev=@@hash.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

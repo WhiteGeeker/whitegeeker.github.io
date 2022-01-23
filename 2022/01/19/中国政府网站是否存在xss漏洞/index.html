@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="白客空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.3.0">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://example.com">
+    <!--SEO-->
+
+<meta name="keywords" content="xss" />
+
+
+<meta name="description" content="1.0 问
+2.0 答攻击中国政府网站在2021年anonymous组织有过a，但是呢在中国是属于犯罪行为，如果想了解的话底下有一点技巧，希望能启发到您
+3.0 过程1.首先
+
+我们来到中国政府..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    中国政府网站是否存在xss漏洞 |
+    
+    白客空间
+</title>
+
+<link rel="alternate" href="/atom.xml" title="白客空间" type="application/atom+xml">
+
+
+<link rel="icon" href="/ok.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<script>
+(function() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="main-header"  style="background-image:url(
+    https://hexo-theme-snippet-1251680922.cos.ap-beijing.myqcloud.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='whitegeeker'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                We Are Anonymous
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://example.com">
+                        白客空间</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/前端/"><i class="fa /img/favition.ico"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/后端/"><i class="fa /img/favition.ico"></i>
+                                后端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/工具/"><i class="fa /img/favition.ico"></i>
+                                工具</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/攻防/"><i class="fa "></i>
+                                攻防</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/社工/"><i class="fa "></i>
+                                社工</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/趣测/"><i class="fa "></i>
+                                趣测</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/问答/"><i class="fa "></i>
+                                问答</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/动态/"><i class="fa "></i>
+                                动态</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="中国政府网站是否存在xss漏洞">
+            
+            中国政府网站是否存在xss漏洞
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/%E9%97%AE%E7%AD%94/">问答</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/xss/" rel="tag">xss</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2022/01/19</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="1-0-问"><a href="#1-0-问" class="headerlink" title="1.0 问"></a>1.0 问</h1><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/7sfia8"><img src="https://s4.ax1x.com/2022/01/19/7sfia8.png" alt="7sfia8.png"></a></p>
+<h1 id="2-0-答"><a href="#2-0-答" class="headerlink" title="2.0 答"></a>2.0 答</h1><p>攻击中国政府网站在2021年anonymous组织有过a，但是呢在中国是属于犯罪行为，如果想了解的话底下有一点技巧，希望能启发到您</p>
+<h1 id="3-0-过程"><a href="#3-0-过程" class="headerlink" title="3.0 过程"></a>3.0 过程</h1><p><strong>1.首先</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/7sfwdK"><img src="https://s4.ax1x.com/2022/01/19/7sfwdK.png" alt="7sfwdK.png"></a></p>
+<p>我们来到中国政府网站：<a target="_blank" rel="noopener" href="http://www.gov.cn/">www.gov.cn</a></p>
+<p>OK，下一步检测是否存在xss漏洞（跨站脚本攻击）</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/7sfoWQ"><img src="https://s4.ax1x.com/2022/01/19/7sfoWQ.png" alt="7sfoWQ.png"></a></p>
+<p>请注意看右上角搜索框中的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="string">&#x27;xss&#x27;</span>)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这是一个简单的xss脚本，常用来测试网站的xss漏洞，当然这种小伎俩gov这些政府网站肯定可以过滤，那么我们来看一下过滤原理：</p>
+<p>！：提示，这里我们要看提交代码后的url</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/7shd6s"><img src="https://s4.ax1x.com/2022/01/19/7shd6s.png" alt="7shd6s.png"></a></p>
+<p>看到了没？alert后面的恶意代码已经被过滤</p>
+<blockquote>
+<p>凡是xss恶意代码，只能过滤、转换，却不能消除，懂我的意思不？</p>
+<p>（不可以根除）</p>
+</blockquote>
+<p><strong>2.其次</strong></p>
+<p>我们来找找旁站以及其它注入，不过从zoomeye中我们就发现了以下漏洞：</p>
+<p><strong>dedecms</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99413">994132021-12-15高危DedeCMS XML注入漏洞(CVE-2018-16784)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99392">993922021-11-24高危Dedecms 身份绕过漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99363">993632021-10-01高危DedeCMS 未授权RCE漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-98044">980442019-08-02高危DedeCMS 后台存在SSRF漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97822">978222019-02-25低危dedecms后台getshell</a></p>
+<p><strong>apache tomcat</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99316">993162021-07-27中危Apache Tomcat HTTP请求走私(CVE-2021-33037)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99034">990342020-11-04高危Apache Tomcat拒绝服务漏洞（CVE-2020-13935）</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-98234">982342020-05-21高危Apache Tomcat session持久化远程代码执行漏洞(CVE-2020-9484)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-98134">981342020-02-20高危Apache Tomcat Ajp协议文件包含漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97905">979052019-04-12高危Apache Tomcat Remote Code Execution on Windows(CVE-2019-0…</a></p>
+<p><strong>phpmyadmin</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97731">977312018-12-18高危PHPMyAdmin multiple vulnerabilities</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97355">973552018-06-21高危phpmyadmin4.8.1后台getshell</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-92512">925122016-11-02高危phpMyAdmin dbase extension 远程代码执行漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-92339">923392016-08-25高危phpmyadmin2.8.0.3任意文件包含漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-92209">922092016-08-01高危PhpMyAdmin 4.3.0—4.6.2 授权用户远程命令执行漏洞</a></p>
+<p><strong>http</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99364">993642021-10-08高危Apache HTTPd 多个路径穿越与命令执行漏洞（CVE-2021-41773 CVE-2021-42013）…</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97900">979002019-04-10高危CVE-2019-0211 Apache Root Privilege Escalation</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97633">976332018-10-30高危ACME Mini_httpd组件任意文件读取漏洞(CVE-2018-18778)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-96556">965562017-09-20高危Apps industrial OT over Server: Anti-Web Local File Incl…</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-96555">965552017-09-20高危Apps industrial OT over Server: Anti-Web Remote Command …</a></p>
+<p><strong>jcms(hanweb)</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-92277">922772016-08-11高危大汉jcms /jcms/jcms_files/jcms1/web1/site/module/comment/op…</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91530">915302016-05-12高危大汉JCMS /xxgk/workflow/design/que_model.jsp 多个参数SQL注入</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91529">915292016-05-12高危大汉JCMS /short_message/que_contact.jsp 等3处SQL注入</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91202">912022016-03-29高危大汉 (JCMS)的opr_getcount.jsp的两处注入（</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91201">912012016-03-29高危大汉JCMS政务系统 opr_ballot.jsp 参数c_uuid SQL注入漏洞</a></p>
+<p><strong>kangle</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-90676">906762016-01-28中危Kangle虚拟主机本地文件包含漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-90674">906742016-01-28中危kangle web server目录遍历漏洞</a></p>
+<p><strong>apache httpd</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99364">993642021-10-08高危Apache HTTPd 多个路径穿越与命令执行漏洞（CVE-2021-41773 CVE-2021-42013）…</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97900">979002019-04-10高危CVE-2019-0211 Apache Root Privilege Escalation</a></p>
+<p><strong>nginx</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-96273">962732017-07-13高危Nginx Remote Integer Overflow Vulnerability(CVE-2017-7529…</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-92538">925382016-11-16高危Nginx 权限提升漏洞 (Debian、Ubuntu发行版)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-89321">893212015-09-06中危nginx 0.5.6 - 1.7.4 SSL session vulnerable</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-62014">620142014-03-31高危Nginx SPDY缓冲区溢出漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-62529">625292013-12-01高危Nginx Blank Null Byte 代码执行漏洞</a></p>
+<p><strong>jsp</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99287">992872021-07-07高危Jspxcms 后台RCE漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-98088">980882019-10-17高危jspxcms不安全解压getshell</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-89587">895872015-09-29中危JSPMyAdmin 1.1 SQL Injection, CSRF &amp; XSS漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-89387">893872015-09-09高危JSPMySQL Administrador CSRF &amp; XSS Vulnerabilities</a></p>
+<p><strong>microsoft iis httpd</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-89233">892332015-07-01高危IIS 系列 Http.sys 处理 Range 整数溢出漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-62350">623502013-04-22高危IIS 7.5 解析错误 命令执行漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-60465">604652012-11-18高危Microsoft IIS 密码信息泄露漏洞（MS12-073)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-60466">604662012-11-18高危Microsoft IIS FTP服务远程命令注入漏洞（MS12-073)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-62289">622892012-07-12中危IIS &lt;7.5 8.3格式短文件名导致的信息泄漏</a></p>
+<p><strong>wordpress</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99431">994312022-01-10高危wordpress SQL注入漏洞（CVE-2022–21661）</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99304">993042021-07-19高危woocommerce 插件 SQL注入漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99235">992352021-04-28高危wordpress 5.7 授权XXE漏洞（CVE-2021-29447）</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99166">991662021-03-25高危WordPress BuddyPress插件远程代码执行漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-99153">991532021-03-10高危WordPress The Plus Addons for Elementor插件身份验证绕过漏洞（CVE-202…</a></p>
+<p><strong>qibocms</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91590">915902016-05-18高危齐博CMS视频系统 showsp.php和list.php 两处SQL注入漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91545">915452016-05-13中危齐博视频系统 video/member/special.php SQL注入漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91496">914962016-05-09中危齐博视频系统 special.php 参数aids SQL注入漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91367">913672016-04-23高危qibocms 地方门户系统zhuangxiu/list.php处注入</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91272">912722016-04-07高危齐博CMS知道系统 zhidao/ask.php等4处SQL注入</a></p>
+<p><strong>fckeditor</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-92521">925212016-11-05中危FCKEditor Core - (Editor ‘spellchecker.php’) Cross-Site S…</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-90176">901762015-12-24低危FCKeditor /spellchecker.php 页面绝对路径泄露</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-90142">901422015-12-21高危FCKeditor JSP版本 connector模块文件上传漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-90136">901362015-12-18高危FCKeditor 2.4.3 /fckeditor/editor/filemanager/upload/php…</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-89450">894502015-09-17高危网站通 CMS FCKeditor 组件文件上传漏洞</a></p>
+<p><strong>discuz!</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-98045">980452019-08-02中危dz x3.4 后台任意文件读取可导致任意用户密码重置或getshell</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-98019">980192019-07-11高危Discuz!ML V3.X 代码注入</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97815">978152019-02-19高危Discuz 3.4 越权登陆漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97709">977092018-12-10高危DiscuzX 两处 SSRF 挖掘及利用</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-97704">977042018-12-05高危Discuz x3.4前台SSRF</a></p>
+<p><strong>kesioncms</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-91027">910272016-03-14中危KesionCMS ASP版 /item/?c-5,key-1.html SQL注入漏洞</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-94931">949312016-02-24高危KesionCMS官网大马一枚</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-89343">893432015-09-07高危KesionCMS V2.5 /plus/ueditor/Uploader.cs 文件上传</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-94930">949302015-07-10中危KesionIMalv2.5逻辑漏洞（DEMO演示）</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.seebug.org/vuldb/ssvid-94906">949062015-06-03高危KesionIMALL 注册处存在cookie 注入</a></p>
+<h1 id="3-0-总结"><a href="#3-0-总结" class="headerlink" title="3.0 总结"></a>3.0 总结</h1><p>即便是中国政府网站也存在大量漏洞，没有无懈可击的网站，或许只是没有发掘到其本质。</p>
+<p><del>有哪位大佬能猜到中国政府网站后台目录吗？</del></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2022/01/20/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E8%A1%A8/" class="pre-post btn btn-default" title='2022年寒假计划清单'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            2022年寒假计划清单</span>
+    </a>
+    
+    
+    <a href="/2022/01/17/ddos%E6%94%BB%E5%87%BBav%E7%BD%91%E7%AB%99/" class="next-post btn btn-default" title='ddos攻击av网站'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            ddos攻击av网站</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+    
+<div class="utteranc">
+  
+  <script
+    src='https://utteranc.es/client.js'
+    repo='shenliyang/snippet-comment'
+    issue-term='pathname'
+    issue-number=''
+    theme='github-light'
+    label=''
+    crossorigin='anonymous'
+    async
+  ></script>
+</div>
+
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-0-%E9%97%AE"><span class="toc-text">1.0 问</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-0-%E7%AD%94"><span class="toc-text">2.0 答</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-0-%E8%BF%87%E7%A8%8B"><span class="toc-text">3.0 过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-0-%E6%80%BB%E7%BB%93"><span class="toc-text">3.0 总结</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+    访问量:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    访客数:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/js/app.js?rev=@@hash.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
