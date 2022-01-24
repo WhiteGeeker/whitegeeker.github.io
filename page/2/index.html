@@ -1,476 +1,198 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-  
-
-  
-  <title>白客空间</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="白客空间">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>白客空间 - ......</title><meta name="author" content="whitegeeker"><meta name="copyright" content="whitegeeker"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta property="og:title" content="白客空间">
 <meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="白客空间">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="whitegeeker">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="白客空间" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '白客空间',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-01-24 17:35:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<body>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">白客空间</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-黑客常用术语" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/03/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD/" class="article-date">
-  <time datetime="2022-01-03T12:05:02.000Z" itemprop="datePublished">2022-01-03</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a>
-  </div>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="白客空间" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">白客空间</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">白客空间</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/01/03/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD/" title="黑客常用术语"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黑客常用术语"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/03/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD/" title="黑客常用术语">黑客常用术语</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-03T12:05:02.000Z" title="发表于 2022-01-03 20:05:02">2022-01-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a></span></div><div class="content"><!-- hexo-inject:begin --><!-- hexo-inject:end -->导言本期博客非常轻松易懂，下面是黑客常用术语
+正文远控
+很流行的一类工具，其中最著名的是灰鸽子，远控最主要的功能就是控制电脑，一般用来做企业电脑批量管理，学校机房，网吧等，但是被黑客利用后，出现了很多新功能，比如键盘记录，偷看视频等，从某种意义上来说是严重违法的行为，随着杀毒软件的升级，和对此类软件的打击，现在玩远控的人越来越少了。
+肉鸡
+所谓“肉鸡”是一种很形象的比方，用来比作那些能够随意被我们操控的电脑或服务器。也就是被远控软件控制的机器。
+木马
+就是那些表面上伪装成了正常的程序，可是当这些被程序运行时，就会获得电脑的整个操控权限。有很多黑客就是用木马来对电脑进行破坏的，例如远控要控制电脑的前提就是先生成木马，然后想办法让对方运行，就能进行控制。 
+网页木马
+表面上伪装成一般的网页文件，但是把病毒代码直接插入到正常的网页文件中，当有人访问时，网页木马就会执行相应的漏洞代码进行破坏。例如有人访问色情网站，发现cpu很高，实际上里面调用了挖矿的代码，当你访问网站时会利用你的电脑进行挖矿。
+挂马
+就是在别人的网站文件里面放入网页木马，将恶意代码插入到对方正常的网页文件里，以使阅读者中马， ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/" title="cmd详解"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cmd详解"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/" title="cmd详解">cmd详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-03T11:57:19.000Z" title="发表于 2022-01-03 19:57:19">2022-01-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a></span></div><div class="content">导言刚入门的黑客，都必须要学会cmd，而cmd并不难理解，只是背诵记忆的较多，学习cmd可以为以后入侵、拿权限奠定坚实的基础。
+不过呢，人都是懒惰的我也是，所以，我会尽可能简化去呈现给大家
+这样我也可以少打点字
+1.ping
+它是用来检查网络是否通畅或者网络连接速度的命令。作为一个生活在网络上的管理员或者黑客来说，ping命令是第一个必须掌握的DOS命令，它所利用的原理是这样的：网络上的机器都有唯一确定的IP地址，我们给目标IP地址发送一个数据包，对方就要返回一个同样大小的数据包，根据返回的数据包我们可以确定目标主机的存在，可以初步判断目标主机的操作系统等。下面就来看看它的一些常用的操作。
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/03/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD/">黑客常用术语</a>
-    </h1>
-  
+-t在ping后面输入-t，即
+1ping -t 
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p><strong>本期博客非常轻松易懂，下面是黑客常用术语</strong></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p><strong>远控</strong></p>
-<p>很流行的一类工具，其中最著名的是灰鸽子，远控最主要的功能就是控制电脑，一般用来做企业电脑批量管理，学校机房，网吧等，但是被黑客利用后，出现了很多新功能，比如键盘记录，偷看视频等，从某种意义上来说是严重违法的行为，随着杀毒软件的升级，和对此类软件的打击，现在玩远控的人越来越少了。</p>
-<p><strong>肉鸡</strong></p>
-<p>所谓“肉鸡”是一种很形象的比方，用来比作那些能够随意被我们操控的电脑或服务器。也就是被远控软件控制的机器。</p>
-<p><strong>木马</strong></p>
-<p>就是那些表面上伪装成了正常的程序，可是当这些被程序运行时，就会获得电脑的整个操控权限。有很多<a target="_blank" rel="noopener" href="https://www.xf1433.com/">黑客</a>就是用木马来对电脑进行破坏的，例如远控要控制电脑的前提就是先生成木马，然后想办法让对方运行，就能进行控制。 </p>
-<p><strong>网页木马</strong></p>
-<p>表面上伪装成一般的网页文件，但是把病毒代码直接插入到正常的网页文件中，当有人访问时，网页木马就会执行相应的漏洞代码进行破坏。例如有人访问色情网站，发现cpu很高，实际上里面调用了挖矿的代码，当你访问网站时会利用你的电脑进行挖矿。</p>
-<p><strong>挂马</strong></p>
-<p>就是在别人的网站文件里面放入网页木马，将恶意代码插入到对方正常的网页文件里，以使阅读者中马，挂马是形容一种操作行为，不是一种技术。</p>
-<p><strong>后门</strong></p>
-<p>这是一种形象的比方，比如你想下载个腾讯qq，但是在网上下载到不是官方的文件，而是别人先把病毒文件绑定在正常的文件里，当打开时会中毒，通常这种病毒称为后门，因为受害者无法发现。</p>
-<p><strong>弱口令</strong></p>
-<p>指那些密码强度不够，容易被猜解的密码，类似123456，abc123，abcdefg，woainixiaofeng这样的口令（密码） ，是黑客常见的入侵手段，100个密码就有20个左右是这种弱密码。</p>
-<p><strong>shell</strong></p>
-<p>指的是一种指令执行环境，比方我们按下键盘上的“windows键+R”时出现“运行”对话框，在里面输入“cmd”会呈现一个可以运行命令的黑窗口，这个窗口大家基本上都用过，或者在黑客电影里看过，这个就是Windows的Shell执行环境。以前没有鼠标只有键盘的时候，就是靠这个完成全部电脑操作的！</p>
-<p><strong>WebShell</strong></p>
-<p>WebShell就是以asp、php、jsp等网页文件方式存在的一种命令环境，也能够将其称做是一种网页后门。黑客在入侵了一个网站后，一般会将这些asp或php后门文件与网站服务器WEB目录下正常的网页文件混在一起，一般会藏得比较深，因为不能被管理员发现，被删除就不能获得网站控制权了。一个网站被挂上webshell后门，基本上可以为所欲为，想修改网站任何部分或者删除都可以。黑客之间的网站交易就是以webshell进行的，例如我花多少钱买这个网站的webshell权限，而攻击者负责想办法在这个网站里面放上webshell后门，这样说大家应该明白了。</p>
-<p><strong>注入</strong></p>
-<p>随着B/S结构开发的网站环境，基本上全部的网站都需要数据库。用户能够提交一段数据库查询代码，根据程序回来的结果，获得某些他想要知的数据，这是正常的情况，但是在查询语句中修改为有恶意攻击的代码，就具有破坏性，这个就是所谓的SQL注入，最具攻击性的网页漏洞，让无数企业站被入侵的罪魁祸首。 </p>
-<p><strong>注入点</strong></p>
-<p>是指能够实行sql注入的地方，一般是带有参数的网页地址。根据注入点数据库的帐号权限的不同，你所得到的权限也不同。 </p>
-<p><strong>内网</strong></p>
-<p>通俗的讲就是局域网，比方网吧，校园网，公司内部网等都属于此类。查看IP地址如果是在以下三个范围之内的话，就说明我们是处于内网之中的：10.0.0.0—10.255.255.255，172.16.0.0—172.31.255.255，192.168.0.0—192.168.255.255。</p>
-<p><strong>外网</strong></p>
-<p>直接连入internet（互联网），能让任何一台电脑相互访问，外网需要接入宽带才能实现。</p>
-<p><strong>免杀</strong></p>
-<p>就是通过加壳、加密、修改特征码、加花指令等等操作来改变程序，使其逃过杀毒软件的查杀。我们前面说的远控生成的木马，往往会被杀毒软件发现，不能达到控制电脑的效果，所以需要利用免杀技术来逃避杀毒软件的扫描，让杀毒软件误以为是安全的软件，从而不进行拦截。 </p>
-<p><strong>加壳</strong></p>
-<p>就是运用特别的算法，将exe可执行程序或许DLL动态链接库文件的编码进行改变（比方实现压缩、加密），以到达缩小文件体积和加密程序编码，甚至是躲过杀毒软件查杀的意图。目前较常用的壳有UPX，ASPack、PePack、PECompact、UPack、免疫007等等。 加壳另外一个重要的作用就是防止软件被破解，有攻就有防嘛！</p>
-<p><strong>花指令</strong></p>
-<p>就是几句汇编指令，让汇编语句进行一些跳转，使得杀毒软件不能正常的判断病毒文件的结构。说通俗点就是”杀毒软件是从头到脚按顺序来查找病毒。如果我们把病毒的头和脚颠倒位置，杀毒软件就找不到病毒了。</p>
-<p><strong>路由器</strong><br>用来上网的设备，以前用宽带线直接连接电脑输入密码就能上网，现在电脑为什么都要连接路由器呢？因为手机需要连接路由器的wifi来上网啊，所以宽带线去连路由器了，电脑没宽带线了，就只能去连接连接路由器了。</p>
-<p><strong>端口</strong><br>要网络上，知道一台电脑的ip地址，仅仅相当于知道了它的居住地址，要和它进行通讯，我们还要知道它开了哪些端口，比方说我们到一家医院，挂号要到1号窗口，划价要到2号窗口，取药要到3号窗口.那么与计算机的通讯也是一样的，要访问小风教程网，你得与小风教程网服务器的80端口进行联系，要ftp登陆空间，传输文件，我们又得服务器的21端口连接了，所以说，端口就是一种数据的传输通道，用于接收某些数据，然后传给相应的回复，而电脑将这些数据处理后，再将相应的回复通过端口传给对方。</p>
-<p><strong>ip地址</strong><br>互联网上的电脑有很多，为了让他们能够彼此识别，互联网上的每一台主机都分配有一个仅有的32位地址，该地址称为ip地址，也称作互联网地址，ip地址由4个数值部分组成，每个数值部分可取值0-255，每个ip地址都有256x256-1=65535个端口。</p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>懂了一些基本用语，相信你会在这条路上越走越远，加油吧！</p>
-<h1 id="文献参考"><a href="#文献参考" class="headerlink" title="文献参考"></a>文献参考</h1><p>小风教程网</p>
+作用：不断向目标发送数据包，直到我们强迫其停止。试想，如果你使用100M的宽带接入，而目标IP是56K的小猫，那么要不了多久，目标IP就因为承受不了这么多的数据而掉线，呵呵，一次攻击就这么简单的实现了。　　
+-l作用：定义发送数据包的大小，默认为32字节，我们利用它可以最大定义到65500字节。结合上面介绍的-t参数一起使用，会有更好的效果哦。 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/01/02/%E9%BB%91%E5%AE%A2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E6%8C%87%E5%8D%97/" title="黑客从入门到入狱指南"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黑客从入门到入狱指南"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/02/%E9%BB%91%E5%AE%A2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E6%8C%87%E5%8D%97/" title="黑客从入门到入狱指南">黑客从入门到入狱指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-02T04:56:26.000Z" title="发表于 2022-01-02 12:56:26">2022-01-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a></span></div><div class="content">0.1 认识很多人并不了解黑客是什么，而是将黑客与骇客混为一谈，实际上:
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/03/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD/" data-id="ckyshsunr000yz4vbacpw1n8s" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%BB%91%E5%AE%A2/" rel="tag">黑客</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
+黑客:最早源自英文hacker，早期在美国的电脑界是带有褒义的。他们都是水平高超的电脑专家，尤其是程序设计人员，算是一个统称。
 
 
-  
-    <article id="post-cmd详解" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/" class="article-date">
-  <time datetime="2022-01-03T11:57:19.000Z" itemprop="datePublished">2022-01-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a>
-  </div>
+“骇客”也可以指：在信息安全里，“骇客”指研究智取计算机安全系统的人员。利用公共通讯网路，如互联网和电话系统，在未经许可的情况下，载入对方系统的被称为黑帽骇客
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/">cmd详解</a>
-    </h1>
-  
+白帽子主要以“防”为主，而黑帽子主要以“攻”为主，不论是黑帽还是白帽，都要先学会攻击。
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p>刚入门的黑客，都<strong>必须</strong>要学会cmd，而cmd并不难理解，只是背诵记忆的较多，学习cmd可以为以后入侵、拿权限奠定坚实的基础。</p>
-<p>不过呢，人都是懒惰的<del>我也是</del>，所以，我会尽可能简化去呈现给大家</p>
-<p><del>这样我也可以少打点字</del></p>
-<h1 id="1-ping"><a href="#1-ping" class="headerlink" title="1.ping"></a>1.ping</h1><blockquote>
-<p>它是用来检查网络是否通畅或者网络连接速度的命令。作为一个生活在网络上的管理员或者黑客来说，ping命令是第一个必须掌握的DOS命令，它所利用的原理是这样的：网络上的机器都有唯一确定的IP地址，我们给目标IP地址发送一个数据包，对方就要返回一个同样大小的数据包，根据返回的数据包我们可以确定目标主机的存在，可以初步判断目标主机的操作系统等。下面就来看看它的一些常用的操作。</p>
-</blockquote>
-<h2 id="t"><a href="#t" class="headerlink" title="-t"></a>-t</h2><p>在ping后面输入-t，即</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -t </span><br></pre></td></tr></table></figure>
+焉知攻，怎知防？ 
 
-<p><strong>作用</strong>：不断向目标发送数据包，直到我们强迫其停止。试想，如果你使用100M的宽带接入，而目标IP是56K的小猫，那么要不了多久，目标IP就因为承受不了这么多的数据而掉线，呵呵，一次攻击就这么简单的实现了。　　</p>
-<h2 id="l"><a href="#l" class="headerlink" title="-l"></a>-l</h2><p><strong>作用</strong>：定义发送数据包的大小，默认为32字节，我们利用它可以最大定义到65500字节。结合上面介绍的-t参数一起使用，会有更好的效果哦。</p>
-<h2 id="n"><a href="#n" class="headerlink" title="-n"></a>-n</h2><p><strong>作用</strong>：定义向目标IP发送数据包的次数，默认为3次。如果网络速度比较慢，3次对我们来说也浪费了不少时间，因为现在我们的目的仅仅是判断目标IP是否存在，那么就定义为一次吧。</p>
-<p>tip：以上可以连用，如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping IP -t -n 3</span><br></pre></td></tr></table></figure>
-
-<p>我这里写的“IP”和”3”都是参数，自己填写，我只是打个比方  </p>
-<blockquote>
-<p>说明一下，如果-t 参数和 -n参数一起使用，ping命令就以放在后面的参数为标准，比如”ping IP -t -n 3”，虽然使用了-t参数，但并不是一直ping下去，而是只ping 3次。另外，ping命令不一定非得ping IP，也可以直接ping主机域名，这样就可以得到主机的IP。</p>
-</blockquote>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
-<p>这里time=2表示从发出数据包到接受到返回数据包所用的时间是2秒，从这里可以判断网络连接速度的大小 。从TTL的返回值可以初步判断被ping主机的操作系统，之所以说”初步判断”是因为这个值是可以修改的。这里TTL=32表示操作系统可能是win98。<br><strong>（小知识：如果TTL=128，则表示目标主机可能是Win2000；如果TTL=250，则目标主机可能是Unix）</strong><br>至于利用ping命令可以快速查找局域网故障，可以快速搜索最快的QQ服务器，可以对别人进行ping攻击……这些就靠大家自己发挥了</p>
-</blockquote>
-<img src="https://s2.loli.net/2022/01/03/YUm39nyVqKv1N2c.jpg" alt="v2-96c2c26eb998d8549840d758fb79124f_720w.jpg" style="zoom:50%;" />
-
-<h1 id="2-nbtstat"><a href="#2-nbtstat" class="headerlink" title="2.nbtstat"></a>2.nbtstat</h1><p> <strong>显示统计数据命令</strong></p>
-<p>该命令使用TCP/IP上的NetBIOS显示协议统计和当前TCP/IP连接，使用这个命令你可以得到远程主机的NETBIOS信息，比如用户名、所属的工作组、网卡的MAC地址等。在此我们就有必要了解几个基本的参数。</p>
-<p><strong>-a</strong> 使用这个参数，只要你知道了远程主机的机器名称，就可以得到它的NETBIOS信息（下同）。 　</p>
-<p>-a这个参数也可以得到远程主机的NETBIOS信息，但需要你知道它的IP。</p>
-<p><strong>-n</strong> 列出本地机器的NETBIOS信息。 　</p>
-<h1 id="3-netstat"><a href="#3-netstat" class="headerlink" title="3.netstat"></a>3.<strong>netstat</strong></h1><blockquote>
-<p>这是一个用来查看网络状态的命令，操作简便功能强大。　</p>
-</blockquote>
-<p>-a 查看本地机器的所有开放端口，可以有效发现和预防木马，可以知道机器所开的服务等信息</p>
-<p>这里可以看出本地机器开放有FTP服务、Telnet服务、邮件服务、WEB服务等。用法：netstat -a IP。  </p>
-<p>-r 列出当前的路由信息，告诉我们本地机器的网关、子网掩码等信息。用法：netstat -r IP。</p>
-<p>正在更新ing…</p>
-<h1 id="文献参考："><a href="#文献参考：" class="headerlink" title="文献参考："></a>文献参考：</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/59498577">https://zhuanlan.zhihu.com/p/59498577</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/03/cmd%E8%AF%A6%E8%A7%A3/" data-id="ckyshsumw0001z4vbc23lhlwq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%BB%91%E5%AE%A2/" rel="tag">黑客</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
+0.2发展史
+黑客最早始于20 世纪50年代，最早的计算机1946年在宾夕法尼亚大学出现，而最早的黑客出现于麻省理工学院，贝尔实验室也有。最初的黑客一般都是一些高级的技术人员，他们热衷于挑战、崇尚自由并主张信息的共享。1994年以来，因特网在全球的迅猛发展为人们提供了方便、自由和无限的财富，政治、军事、经济、科技、教育、文化等各个方面都越来越网络化，并且逐渐成为人们生活、娱乐的一部分。可以说，信息时代已经到来，信息已成为物质和能量以外维持人类社会的第三资源，它是未来生活中的重要介质。随着计算机的普及和因特网技术的 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/10/10/%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E8%87%AA%E5%AD%A6%E6%8E%A8%E8%8D%90/" title="编程网站自学推荐"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="编程网站自学推荐"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/10/%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E8%87%AA%E5%AD%A6%E6%8E%A8%E8%8D%90/" title="编程网站自学推荐">编程网站自学推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-10T12:34:50.000Z" title="发表于 2021-10-10 20:34:50">2021-10-10</time></span></div><div class="content">
+title: hellodate: 2021-10-07 21:01:43tags:
 
 
-  
-    <article id="post-黑客从入门到入狱指南" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/02/%E9%BB%91%E5%AE%A2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E6%8C%87%E5%8D%97/" class="article-date">
-  <time datetime="2022-01-02T04:56:26.000Z" itemprop="datePublished">2022-01-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a>
-  </div>
+title: 学习编程十大优质网站推荐date: 2021-10-05 17:20:04tags:教程、技巧
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/02/%E9%BB%91%E5%AE%A2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E6%8C%87%E5%8D%97/">黑客从入门到入狱指南</a>
-    </h1>
-  
+本期分享给大家十个我日常中觉得不错的优质网站目录：1.CSDN2.博客园3.github4.菜鸟教程5.B站6.开源中国7.黑基网8.掘金9.lintcode10.本站
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="0-1-认识"><a href="#0-1-认识" class="headerlink" title="0.1 认识"></a>0.1 认识</h1><p>很多人并不了解黑客是什么，而是将黑客与骇客混为一谈，实际上:</p>
-<blockquote>
-<p>黑客:最早源自英文hacker，早期在美国的电脑界是带有褒义的。他们都是水平高超的电脑专家，尤其是程序设计人员，算是一个统称。</p>
-</blockquote>
-<blockquote>
-<p>“骇客”也可以指：在信息安全里，“骇客”指研究智取计算机安全系统的人员。利用公共通讯网路，如互联网和电话系统，在未经许可的情况下，载入对方系统的被称为黑帽骇客</p>
-</blockquote>
-<p>白帽子主要以“防”为主，而黑帽子主要以“攻”为主，不论是黑帽还是白帽，都要先学会攻击。</p>
-<blockquote>
-<p>焉知攻，怎知防？ </p>
-</blockquote>
-<h1 id="0-2发展史"><a href="#0-2发展史" class="headerlink" title="0.2发展史"></a>0.2发展史</h1><blockquote>
-<p>黑客最早始于20 世纪50年代，最早的计算机1946年在宾夕法尼亚大学出现，而最早的黑客出现于麻省理工学院，贝尔实验室也有。最初的黑客一般都是一些高级的技术人员，他们热衷于挑战、崇尚自由并主张信息的共享。<br>1994年以来，因特网在全球的迅猛发展为人们提供了方便、自由和无限的财富，政治、军事、经济、科技、教育、文化等各个方面都越来越网络化，并且逐渐成为人们生活、娱乐的一部分。可以说，信息时代已经到来，信息已成为物质和能量以外维持人类社会的第三资源，它是未来生活中的重要介质。随着计算机的普及和因特网技术的迅速发展，黑客也随之出现了。</p>
-</blockquote>
-<blockquote>
-<p>黑客”一词由英语Hacker英译而来，是指专门研究、发现计算机和网络漏洞的计算机爱好者。他们伴随着计算机和网络的发展而产生成长。黑客对计算机有着狂热的兴趣和执着的追求，他们不断地研究计算机和网络知识，发现计算机和网络中存在的漏洞，喜欢挑战高难度的网络系统并从中找到漏洞，然后向管理员提出解决和修补漏洞的方法。<br>黑客不干涉政治，不受政治利用，他们的出现推动了计算机和网络的发展与完善。黑客所做的不是恶意破坏，他们是一群纵横驰骋于网络上的大侠，追求共享、免费，提倡自由、平等。黑客的存在是由于计算机技术的不健全，从某种意义上来讲，计算机的安全需要更多黑客去维护。<br>但是到了今天，黑客一词已被用于泛指那些专门利用计算机搞破坏或恶作剧的家伙，对这些人的正确英文叫法是Cracker，有人也翻译成“骇客”或是“<strong>者”，也正是由于</strong>者的出现玷污了黑客的声誉，使人们把黑客和**者混为一谈，黑客被人们认为是在网上到处搞破坏的人。<br>一个黑客即使从意识和技术水平上已达到黑客水平，也决对不会声称自己是一名黑客，因为黑客只有公认的，没有自封的，他们重视技术，更重视思想和品质！</p>
-<p><del>当然，想装逼也可以，但要有真正的技术</del></p>
-</blockquote>
-<h1 id="0-3-需要什么"><a href="#0-3-需要什么" class="headerlink" title="0.3 需要什么"></a>0.3 需要什么</h1><p>很多人都梦想当黑客，但实际上，在互联网安全这条道路上，本无对错，评判的人多了，仿佛有了…</p>
-<p>不论你是为了自己还是他人，如果你认为你是一名黑客，那么<strong>一定</strong>要有一下几点：  </p>
-<ul>
-<li>对算法、程序的痴迷：看到数字、字符会有种亲切感</li>
-<li>时刻想着自己只是技术领域大海中的一滴水：即便自己有实力，也最好要保留，真正的黑客不只是会追求功名</li>
-<li>有恒心：大家都知道，黑客所需学习的知识远远大于普通的程序员，如果没有将其当作终生爱好，最好就不要学，因为很难坚持</li>
-<li>耐下心来，多思考，勤查资料：很多时候我们单凭一己之力很难攻克难题，这个时候可以借助任何工具，要努力突破瓶颈</li>
-</ul>
-<h1 id="0-4-推荐语言"><a href="#0-4-推荐语言" class="headerlink" title="0.4 推荐语言"></a>0.4 推荐语言</h1><p><strong>python</strong>       </p>
-<p>**java **      </p>
-<p><strong>php</strong>               </p>
-<p><strong>asp</strong>   </p>
-<p><strong>html/css/javascript</strong></p>
-<p>如果有能力，最好还要学精通<strong>c/c++</strong></p>
-<h1 id="1-0-DAY1-cmd指令"><a href="#1-0-DAY1-cmd指令" class="headerlink" title="1.0 DAY1 cmd指令"></a>1.0 DAY1 cmd指令</h1><blockquote>
-</blockquote>
-<h1 id="2-0-DAY02-黑客术语"><a href="#2-0-DAY02-黑客术语" class="headerlink" title="2.0 DAY02 黑客术语"></a>2.0 DAY02 黑客术语</h1><blockquote>
-</blockquote>
-<p><marquee>每周都会更新，尽请期待</marquee></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/02/%E9%BB%91%E5%AE%A2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E6%8C%87%E5%8D%97/" data-id="ckyshsunp000vz4vb00dpd4lk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%BB%91%E5%AE%A2/" rel="tag">黑客</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
+1.CSDN说起CSDN应该很多人都很熟悉，它是蒋涛创立的“中国程序员大本营”里面有很多优质栏目，平时我遇到不懂的东西会从里面查找答案csdn传送门
 
 
-  
-    <article id="post-编程网站自学推荐" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/10/10/%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E8%87%AA%E5%AD%A6%E6%8E%A8%E8%8D%90/" class="article-date">
-  <time datetime="2021-10-10T12:34:50.000Z" itemprop="datePublished">2021-10-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/10/%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E8%87%AA%E5%AD%A6%E6%8E%A8%E8%8D%90/">编程网站自学推荐</a>
-    </h1>
-  
+2.博客园博客园里的博客数不胜数，论技术就看这个网站，比较全面UI界面也比较好看博客园传送门
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: hello<br>date: 2021-10-07 21:01:43<br>tags:</p>
-<hr>
-<hr>
-<p>title: 学习编程十大优质网站推荐<br>date: 2021-10-05 17:20:04<br>tags:教程、技巧</p>
-<hr>
-<h2 id="本期分享给大家十个我日常中觉得不错的优质网站"><a href="#本期分享给大家十个我日常中觉得不错的优质网站" class="headerlink" title="本期分享给大家十个我日常中觉得不错的优质网站"></a>本期分享给大家十个我日常中觉得不错的优质网站</h2><p>目录：<br>1.CSDN<br>2.博客园<br>3.github<br>4.菜鸟教程<br>5.B站<br>6.开源中国<br>7.黑基网<br>8.掘金<br>9.lintcode<br>10.<del>本站</del></p>
-<hr>
-<h3 id="1-CSDN"><a href="#1-CSDN" class="headerlink" title="1.CSDN"></a>1.CSDN</h3><p>说起CSDN应该很多人都很熟悉，它是蒋涛创立的“中国程序员大本营”<br><img src="https://i.loli.net/2021/10/05/EMdnYlOyxawbGcq.png" alt="2345截图20211005173440.png"><br>里面有很多优质栏目，<br>平时我遇到不懂的东西会从里面查找答案<br><a target="_blank" rel="noopener" href="https://www.csdn.net/">csdn传送门</a></p>
-        
-          <p class="article-more-link">
-            <a href="/2021/10/10/%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E8%87%AA%E5%AD%A6%E6%8E%A8%E8%8D%90/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/10/%E7%BC%96%E7%A8%8B%E7%BD%91%E7%AB%99%E8%87%AA%E5%AD%A6%E6%8E%A8%E8%8D%90/" data-id="ckyshsunh000kz4vbetpqb0bm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+3.github这个网站不用我多说，全球最大开源平台，托管git，功能十分强大就是经常访问不进去，有时要配置映射文件
+我的这个网站也是在github上申请的http://github.com
 
+4.菜鸟教程力推！！！不止我一个人觉得这不是给菜鸟看的里面覆盖了百分之九十你想学的编程语言及计算机知识http://runoob.com
 
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&amp;laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8A%A8%E6%80%81/">动态</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%94%BB%E9%98%B2/">攻防</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%97%AE%E7%AD%94/">问答</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DDOS/" rel="tag">DDOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/" rel="tag">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ddos/" rel="tag">ddos</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xss/" rel="tag">xss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B6%E5%AE%83/" rel="tag">其它</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90/" rel="tag">视频解析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%BB%91%E5%AE%A2/" rel="tag">黑客</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/DDOS/" style="font-size: 10px;">DDOS</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/ddos/" style="font-size: 10px;">ddos</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/xss/" style="font-size: 15px;">xss</a> <a href="/tags/%E5%85%B6%E5%AE%83/" style="font-size: 10px;">其它</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 15px;">日常</a> <a href="/tags/%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90/" style="font-size: 10px;">视频解析</a> <a href="/tags/%E9%BB%91%E5%AE%A2/" style="font-size: 20px;">黑客</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/01/22/%E5%90%84%E7%A7%8Dxss%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF/">各种xss插入姿势</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/21/%E8%81%8A%E5%A4%A9%E5%AE%A4/">聊天室</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/20/%E5%85%B3%E4%BA%8E%E6%97%A5%E5%B8%B8%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/">关于日常前端开发的那些坑</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/20/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E8%A1%A8/">2022年寒假计划清单</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/19/%E4%B8%AD%E5%9B%BD%E6%94%BF%E5%BA%9C%E7%BD%91%E7%AB%99%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8xss%E6%BC%8F%E6%B4%9E/">中国政府网站是否存在xss漏洞</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 whitegeeker<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</body>
-</html>
+5.b站（bilibili）这个不多说， ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">whitegeeker</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/01/22/%E5%90%84%E7%A7%8Dxss%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF/" title="各种xss插入姿势"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="各种xss插入姿势"/></a><div class="content"><a class="title" href="/2022/01/22/%E5%90%84%E7%A7%8Dxss%E6%8F%92%E5%85%A5%E5%A7%BF%E5%8A%BF/" title="各种xss插入姿势">各种xss插入姿势</a><time datetime="2022-01-22T09:22:57.000Z" title="发表于 2022-01-22 17:22:57">2022-01-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/%E8%81%8A%E5%A4%A9%E5%AE%A4/" title="聊天室"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="聊天室"/></a><div class="content"><a class="title" href="/2022/01/21/%E8%81%8A%E5%A4%A9%E5%AE%A4/" title="聊天室">聊天室</a><time datetime="2022-01-21T05:45:26.000Z" title="发表于 2022-01-21 13:45:26">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/20/%E5%85%B3%E4%BA%8E%E6%97%A5%E5%B8%B8%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/" title="关于日常前端开发的那些坑"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于日常前端开发的那些坑"/></a><div class="content"><a class="title" href="/2022/01/20/%E5%85%B3%E4%BA%8E%E6%97%A5%E5%B8%B8%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/" title="关于日常前端开发的那些坑">关于日常前端开发的那些坑</a><time datetime="2022-01-20T09:59:35.000Z" title="发表于 2022-01-20 17:59:35">2022-01-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/20/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E8%A1%A8/" title="2022年寒假计划清单"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2022年寒假计划清单"/></a><div class="content"><a class="title" href="/2022/01/20/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E8%A1%A8/" title="2022年寒假计划清单">2022年寒假计划清单</a><time datetime="2022-01-20T04:00:00.000Z" title="发表于 2022-01-20 12:00:00">2022-01-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/19/%E4%B8%AD%E5%9B%BD%E6%94%BF%E5%BA%9C%E7%BD%91%E7%AB%99%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8xss%E6%BC%8F%E6%B4%9E/" title="中国政府网站是否存在xss漏洞"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中国政府网站是否存在xss漏洞"/></a><div class="content"><a class="title" href="/2022/01/19/%E4%B8%AD%E5%9B%BD%E6%94%BF%E5%BA%9C%E7%BD%91%E7%AB%99%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8xss%E6%BC%8F%E6%B4%9E/" title="中国政府网站是否存在xss漏洞">中国政府网站是否存在xss漏洞</a><time datetime="2022-01-19T13:06:16.000Z" title="发表于 2022-01-19 21:06:16">2022-01-19</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8A%A8%E6%80%81/"><span class="card-category-list-name">动态</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="card-category-list-name">后端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">工具</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%94%BB%E9%98%B2/"><span class="card-category-list-name">攻防</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%97%AE%E7%AD%94/"><span class="card-category-list-name">问答</span><span class="card-category-list-count">2</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/DDOS/" style="font-size: 1.1em; color: #999">DDOS</a> <a href="/tags/chrome/" style="font-size: 1.1em; color: #999">chrome</a> <a href="/tags/ddos/" style="font-size: 1.1em; color: #999">ddos</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/xss/" style="font-size: 1.3em; color: #99a1ac">xss</a> <a href="/tags/%E5%85%B6%E5%AE%83/" style="font-size: 1.1em; color: #999">其它</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1.3em; color: #99a1ac">日常</a> <a href="/tags/%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90/" style="font-size: 1.1em; color: #999">视频解析</a> <a href="/tags/%E9%BB%91%E5%AE%A2/" style="font-size: 1.5em; color: #99a9bf">黑客</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">13</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">14</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-01-24T09:35:03.974Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By whitegeeker</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
