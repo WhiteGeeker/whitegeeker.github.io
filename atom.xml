@@ -164,54 +164,6 @@
   </entry>
   
   <entry>
-    <title>javascript教程</title>
-    <link href="http://example.com/2022/01/17/javascript%E6%95%99%E7%A8%8B/"/>
-    <id>http://example.com/2022/01/17/javascript%E6%95%99%E7%A8%8B/</id>
-    <published>2022-01-17T09:10:16.000Z</published>
-    <updated>2022-01-18T05:52:53.497Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-0-内联框架"><a href="#1-0-内联框架" class="headerlink" title="1.0 内联框架"></a>1.0 内联框架</h1><iframe src="https://www.runoob.com/js/js-tutorial.html" height="1500" weight="800"></iframe><h1 id="2-0-声明"><a href="#2-0-声明" class="headerlink" title="2.0 声明"></a>2.0 声明</h1><p>转载</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1-0-内联框架&quot;&gt;&lt;a href=&quot;#1-0-内联框架&quot; class=&quot;headerlink&quot; title=&quot;1.0 内联框架&quot;&gt;&lt;/a&gt;1.0 内联框架&lt;/h1&gt;&lt;iframe src=&quot;https://www.runoob.com/js/js-tutoria</summary>
-      
-    
-    
-    
-    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>css3教程</title>
-    <link href="http://example.com/2022/01/17/css3%E6%95%99%E7%A8%8B/"/>
-    <id>http://example.com/2022/01/17/css3%E6%95%99%E7%A8%8B/</id>
-    <published>2022-01-17T09:08:41.000Z</published>
-    <updated>2022-01-18T05:52:25.932Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-0-内联框架"><a href="#1-0-内联框架" class="headerlink" title="1.0 内联框架"></a>1.0 内联框架</h1><iframe src="https://www.runoob.com/css3/css3-tutorial.html" height="1500" weight="800"></iframe><h1 id="2-0-声明"><a href="#2-0-声明" class="headerlink" title="2.0 声明"></a>2.0 声明</h1><p>转载runoob.com</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1-0-内联框架&quot;&gt;&lt;a href=&quot;#1-0-内联框架&quot; class=&quot;headerlink&quot; title=&quot;1.0 内联框架&quot;&gt;&lt;/a&gt;1.0 内联框架&lt;/h1&gt;&lt;iframe src=&quot;https://www.runoob.com/css3/css3-tut</summary>
-      
-    
-    
-    
-    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="css3" scheme="http://example.com/tags/css3/"/>
-    
-  </entry>
-  
-  <entry>
     <title>python的turtle库</title>
     <link href="http://example.com/2022/01/16/python%E7%9A%84turtle%E5%BA%93/"/>
     <id>http://example.com/2022/01/16/python%E7%9A%84turtle%E5%BA%93/</id>
@@ -379,28 +331,6 @@
     
     
     <category term="黑客" scheme="http://example.com/tags/%E9%BB%91%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python</title>
-    <link href="http://example.com/2021/12/12/python/"/>
-    <id>http://example.com/2021/12/12/python/</id>
-    <published>2021-12-12T03:43:52.000Z</published>
-    <updated>2021-12-12T03:53:07.805Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Python-3-教程"><a href="#Python-3-教程" class="headerlink" title="Python 3 教程"></a>Python 3 教程</h1><h2 id="1-认识"><a href="#1-认识" class="headerlink" title="1.认识"></a>1.认识</h2><img src="https://www.runoob.com/wp-content/uploads/2014/05/python3.png" alt="alt" style="zoom:80%;" /><blockquote><p>Python 的 3.0 版本，常被称为 Python 3000，或简称 Py3k。相对于 Python 的早期版本，这是一个较大的升级。为了不带入过多的累赘，Python 3.0 在设计的时候没有考虑向下兼容。<strong>官方宣布，2020 年 1 月 1 日， 停止 Python 2 的更新。</strong></p></blockquote><p><strong>查看 Python 版本</strong></p><p>我们可以在命令窗口(Windows 使用 win+R 调出 cmd 运行框)使用以下命令查看我们使用的 Python 版本：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -V</span><br></pre></td></tr></table></figure><p>或者：  </p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure><p>以上命令执行结果如下：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python <span class="number">3</span>.<span class="number">3</span>.<span class="number">2</span></span><br></pre></td></tr></table></figure><p>你也可以进入Python的交互式编程模式，查看版本：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Python <span class="number">3</span>.<span class="number">3</span>.<span class="number">2</span> (v3.<span class="number">3</span>.<span class="number">2</span>:d047928ae3f6, May <span class="number">16</span> <span class="number">2013</span>, <span class="number">00</span>:<span class="number">03</span>:<span class="number">43</span>) [MSC v.<span class="number">1600</span> <span class="number">32</span> bit (Intel)] on win32</span><br><span class="line"><span class="built_in">Type</span> &quot;copyright&quot;, &quot;credits&quot; or &quot;license()&quot; <span class="keyword">for</span> <span class="built_in">more</span> information.</span><br><span class="line">&gt;&gt;&gt; </span><br></pre></td></tr></table></figure><p><strong>第一个Python3.x程序</strong></p><p>对于大多数程序语言，第一个入门编程代码便是”Hello World！”，以下代码为使用Python输出”Hello World！”：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure><p>你可以将以上代码保存在 hello.py 文件中并使用 python 命令执行该脚本文件。</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 hello.py</span><br></pre></td></tr></table></figure><p>以上命令输出结果为：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, World!</span><br></pre></td></tr></table></figure><h2 id="2-简介"><a href="#2-简介" class="headerlink" title="2.简介"></a>2.简介</h2><p><strong>Python3 简介</strong></p><blockquote><p>Python 是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。Python 的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。</p></blockquote><ul><li><p><strong>Python 是一种解释型语言：</strong> 这意味着开发过程中没有了编译这个环节。类似于PHP和Perl语言。</p></li><li><p><strong>Python 是交互式语言：</strong> 这意味着，您可以在一个 Python 提示符 <strong>&gt;&gt;&gt;</strong> 后直接执行代码。</p></li><li><p><strong>Python 是面向对象语言:</strong> 这意味着Python支持面向对象的风格或代码封装在对象的编程技术。</p></li><li><p><strong>Python 是初学者的语言：</strong>Python 对初级程序员而言，是一种伟大的语言，它支持广泛的应用程序开发，从简单的文字处理到 WWW 浏览器再到游戏。</p></li></ul><h2 id="3-历史"><a href="#3-历史" class="headerlink" title="3.历史"></a>3.历史</h2><blockquote><p>Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计出来的。</p></blockquote><blockquote><p>Python 本身也是由诸多其他语言发展而来的,这包括 ABC、Modula-3、C、C++、Algol-68、SmallTalk、Unix shell 和其他的脚本语言等等。</p></blockquote><blockquote><p>像 Perl 语言一样，Python 源代码同样遵循 GPL(GNU General Public License)协议。</p></blockquote><blockquote><p>现在 Python 是由一个核心开发团队在维护，Guido van Rossum 仍然占据着至关重要的作用，指导其进展。</p></blockquote><blockquote><p>Python 2.0 于 2000 年 10 月 16 日发布，增加了实现完整的垃圾回收，并且支持 Unicode。</p></blockquote><blockquote><p>Python 3.0 于 2008 年 12 月 3 日发布，此版不完全兼容之前的 Python 源代码。不过，很多新特性后来也被移植到旧的Python 2.6/2.7版本。</p></blockquote><blockquote><p>Python 3.0 版本，常被称为 Python 3000，或简称 Py3k。相对于 Python 的早期版本，这是一个较大的升级。</p></blockquote><blockquote><p>Python 2.7 被确定为最后一个 Python 2.x 版本，它除了支持 Python 2.x 语法外，还支持部分 Python 3.1 语法。</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Python-3-教程&quot;&gt;&lt;a href=&quot;#Python-3-教程&quot; class=&quot;headerlink&quot; title=&quot;Python 3 教程&quot;&gt;&lt;/a&gt;Python 3 教程&lt;/h1&gt;&lt;h2 id=&quot;1-认识&quot;&gt;&lt;a href=&quot;#1-认识&quot; class=&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="编程" scheme="http://example.com/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
