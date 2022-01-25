@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="白客空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.3.0">
+    <meta name="root" content="/project/">
+    <link rel="dns-prefetch" href="http://whitegeeker.github.io/project">
+    <!--SEO-->
+
+<meta name="keywords" content="黑客" />
+
+
+<meta name="description" content="导言刚入门的黑客，都必须要学会cmd，而cmd并不难理解，只是背诵记忆的较多，学习cmd可以为以后入侵、拿权限奠定坚实的基础。
+不过呢，人都是懒惰的我也是，所以，我会尽可能简化去呈现给大家
+这样..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    cmd详解 |
+    
+    白客空间
+</title>
+
+<link rel="alternate" href="/atom.xml" title="白客空间" type="application/atom+xml">
+
+
+<link rel="icon" href="/ok.ico">
+
+    
+
+
+<link rel="stylesheet" href="/project/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/project/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/project/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<script>
+(function() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="main-header"  style="background-image:url(
+    https://hexo-theme-snippet-1251680922.cos.ap-beijing.myqcloud.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='whitegeeker'>
+            <img src="/project/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                We Are Anonymous
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://whitegeeker.github.io/project">
+                        白客空间</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/前端/"><i class="fa /img/favition.ico"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/后端/"><i class="fa /img/favition.ico"></i>
+                                后端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/工具/"><i class="fa /img/favition.ico"></i>
+                                工具</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/攻防/"><i class="fa "></i>
+                                攻防</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/社工/"><i class="fa "></i>
+                                社工</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/趣测/"><i class="fa "></i>
+                                趣测</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/问答/"><i class="fa "></i>
+                                问答</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/动态/"><i class="fa "></i>
+                                动态</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="cmd详解">
+            
+            cmd详解
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/project/categories/%E6%94%BB%E9%98%B2/">攻防</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/project/tags/%E9%BB%91%E5%AE%A2/" rel="tag">黑客</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2022/01/03</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p>刚入门的黑客，都<strong>必须</strong>要学会cmd，而cmd并不难理解，只是背诵记忆的较多，学习cmd可以为以后入侵、拿权限奠定坚实的基础。</p>
+<p>不过呢，人都是懒惰的<del>我也是</del>，所以，我会尽可能简化去呈现给大家</p>
+<p><del>这样我也可以少打点字</del></p>
+<h1 id="1-ping"><a href="#1-ping" class="headerlink" title="1.ping"></a>1.ping</h1><blockquote>
+<p>它是用来检查网络是否通畅或者网络连接速度的命令。作为一个生活在网络上的管理员或者黑客来说，ping命令是第一个必须掌握的DOS命令，它所利用的原理是这样的：网络上的机器都有唯一确定的IP地址，我们给目标IP地址发送一个数据包，对方就要返回一个同样大小的数据包，根据返回的数据包我们可以确定目标主机的存在，可以初步判断目标主机的操作系统等。下面就来看看它的一些常用的操作。</p>
+</blockquote>
+<h2 id="t"><a href="#t" class="headerlink" title="-t"></a>-t</h2><p>在ping后面输入-t，即</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -t </span><br></pre></td></tr></table></figure>
+
+<p><strong>作用</strong>：不断向目标发送数据包，直到我们强迫其停止。试想，如果你使用100M的宽带接入，而目标IP是56K的小猫，那么要不了多久，目标IP就因为承受不了这么多的数据而掉线，呵呵，一次攻击就这么简单的实现了。　　</p>
+<h2 id="l"><a href="#l" class="headerlink" title="-l"></a>-l</h2><p><strong>作用</strong>：定义发送数据包的大小，默认为32字节，我们利用它可以最大定义到65500字节。结合上面介绍的-t参数一起使用，会有更好的效果哦。</p>
+<h2 id="n"><a href="#n" class="headerlink" title="-n"></a>-n</h2><p><strong>作用</strong>：定义向目标IP发送数据包的次数，默认为3次。如果网络速度比较慢，3次对我们来说也浪费了不少时间，因为现在我们的目的仅仅是判断目标IP是否存在，那么就定义为一次吧。</p>
+<p>tip：以上可以连用，如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping IP -t -n 3</span><br></pre></td></tr></table></figure>
+
+<p>我这里写的“IP”和”3”都是参数，自己填写，我只是打个比方  </p>
+<blockquote>
+<p>说明一下，如果-t 参数和 -n参数一起使用，ping命令就以放在后面的参数为标准，比如”ping IP -t -n 3”，虽然使用了-t参数，但并不是一直ping下去，而是只ping 3次。另外，ping命令不一定非得ping IP，也可以直接ping主机域名，这样就可以得到主机的IP。</p>
+</blockquote>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
+<p>这里time=2表示从发出数据包到接受到返回数据包所用的时间是2秒，从这里可以判断网络连接速度的大小 。从TTL的返回值可以初步判断被ping主机的操作系统，之所以说”初步判断”是因为这个值是可以修改的。这里TTL=32表示操作系统可能是win98。<br><strong>（小知识：如果TTL=128，则表示目标主机可能是Win2000；如果TTL=250，则目标主机可能是Unix）</strong><br>至于利用ping命令可以快速查找局域网故障，可以快速搜索最快的QQ服务器，可以对别人进行ping攻击……这些就靠大家自己发挥了</p>
+</blockquote>
+<img src="https://s2.loli.net/2022/01/03/YUm39nyVqKv1N2c.jpg" alt="v2-96c2c26eb998d8549840d758fb79124f_720w.jpg" style="zoom:50%;" />
+
+<h1 id="2-nbtstat"><a href="#2-nbtstat" class="headerlink" title="2.nbtstat"></a>2.nbtstat</h1><p> <strong>显示统计数据命令</strong></p>
+<p>该命令使用TCP/IP上的NetBIOS显示协议统计和当前TCP/IP连接，使用这个命令你可以得到远程主机的NETBIOS信息，比如用户名、所属的工作组、网卡的MAC地址等。在此我们就有必要了解几个基本的参数。</p>
+<p><strong>-a</strong> 使用这个参数，只要你知道了远程主机的机器名称，就可以得到它的NETBIOS信息（下同）。 　</p>
+<p>-a这个参数也可以得到远程主机的NETBIOS信息，但需要你知道它的IP。</p>
+<p><strong>-n</strong> 列出本地机器的NETBIOS信息。 　</p>
+<h1 id="3-netstat"><a href="#3-netstat" class="headerlink" title="3.netstat"></a>3.<strong>netstat</strong></h1><blockquote>
+<p>这是一个用来查看网络状态的命令，操作简便功能强大。　</p>
+</blockquote>
+<p>-a 查看本地机器的所有开放端口，可以有效发现和预防木马，可以知道机器所开的服务等信息</p>
+<p>这里可以看出本地机器开放有FTP服务、Telnet服务、邮件服务、WEB服务等。用法：netstat -a IP。  </p>
+<p>-r 列出当前的路由信息，告诉我们本地机器的网关、子网掩码等信息。用法：netstat -r IP。</p>
+<p>正在更新ing…</p>
+<h1 id="文献参考："><a href="#文献参考：" class="headerlink" title="文献参考："></a>文献参考：</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/59498577">https://zhuanlan.zhihu.com/p/59498577</a></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/project/2022/01/03/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD/" class="pre-post btn btn-default" title='黑客常用术语'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            黑客常用术语</span>
+    </a>
+    
+    
+    <a href="/project/2022/01/02/%E9%BB%91%E5%AE%A2%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E6%8C%87%E5%8D%97/" class="next-post btn btn-default" title='黑客从入门到入狱指南'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            黑客从入门到入狱指南</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+    
+<div class="utteranc">
+  
+  <script
+    src='https://utteranc.es/client.js'
+    repo='shenliyang/snippet-comment'
+    issue-term='pathname'
+    issue-number=''
+    theme='github-light'
+    label=''
+    crossorigin='anonymous'
+    async
+  ></script>
+</div>
+
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%BC%E8%A8%80"><span class="toc-text">导言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-ping"><span class="toc-text">1.ping</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#t"><span class="toc-text">-t</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#l"><span class="toc-text">-l</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#n"><span class="toc-text">-n</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-text">实例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-nbtstat"><span class="toc-text">2.nbtstat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-netstat"><span class="toc-text">3.netstat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-text">文献参考：</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+    访问量:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    访客数:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script src="/project/js/app.js?rev=@@hash.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
